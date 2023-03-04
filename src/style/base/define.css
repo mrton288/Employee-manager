@@ -1,0 +1,81 @@
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.top-2 {
+    margin-top: 20px;
+}
+
+.gap-8 {
+    column-gap: 8px;
+}
+
+.m-top {
+    margin-top: 9px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mr-12 {
+    margin-right: 12px;
+}
+
+.ml-12 {
+    margin-left: 12px;
+}
+
+.w-26percent {
+    width: 26%;
+}
+
+/* Màu đỏ cảnh báo lỗi thông dụng */
+.required {
+    color: var(--text-error);
+}
+
+/* Text toast message cảnh báo */
+.text-success {
+    color: var(--text-success-toast-message);
+}
+
+.text-warning {
+    color: var(--text-warning-toast-message);
+}
+
+.text-error {
+    color: var(--text-error-toast-message);
+}
+
+/* Căn chỉnh text */
+.text__align-right {
+    text-align: right;
+    margin-right: 10px;
+}
+.text__algin-center {
+    text-align: center;
+}
+
+/* border của input  */
+
+.border__error {
+    border-color: var(--border-input-error) !important
+}
+
+.border__focus {
+    border-color: var(--border-input-focus);
+}

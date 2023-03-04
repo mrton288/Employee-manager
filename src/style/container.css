@@ -1,0 +1,169 @@
+/* Components css */
+@import url(./components/button.css);
+/* @import url(./components/combobox.css); */
+@import url(./components/popup.css);
+@import url(./components/input.css);
+/* @import url(./components/table.css); */
+@import url(./components/dialog.css);
+@import url(./components/icon.css);
+@import url(./components/toast.css);
+@import url(./components/select.css);
+@import url(./components/dropdown.css);
+@import url(./components/option.css);
+@import url(./components/radio.css);
+@import url(../style/base/define.css);
+@import url(../style/base/variable.css);
+
+
+/* Layout css*/
+@import url(./layout/header.css);
+@import url(./layout/content.css);
+@import url(./layout/menu.css);
+
+
+/* Assets css */
+
+@font-face {
+    font-family: duc;
+    src: url('/src/assets/fonts/notosans-regular.2cb88a13.woff2');
+}
+
+
+* {
+    font-family: duc;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 13px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.main {
+    flex: 1;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cdd3d6;
+    border-radius: 4px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cdd3d6;
+    border-radius: 4px;
+}
+
+select {
+    /*for firefox*/
+    -moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance:none;
+    appearance: none;
+}
+
+/*for IE10+*/
+select::-ms-expand {
+    display: none;
+}
+
+
+.align-item {
+    align-items: center;
+    height: 36px;
+}
+
+.color-red {
+    color: #FF3939;
+}
+
+.error-info {
+    color: red;
+    margin-top: 3px;
+    font-size: 11px;
+}
+
+
+.background-line {
+    background-color: #EDF8EB;
+}
+
+.bgc-line {
+    background-color: #EDF8EB;
+}
+
+.dropdown[tabindex]:focus {
+    outline: none;
+    border :1px solid var(--border-input-focus)!important;/*here change the color*/
+    border-radius: 4px;
+}
+
+span[tabindex]:focus {
+    outline: none;
+    border :1px solid var(--border-input-focus)!important;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: #0000004f;
+}
+
+@-webkit-keyframes rota{
+    from{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
+/* Standard syntax */ 
+@keyframes rota {
+    from{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
+
+.img-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rota 2s linear 0s infinite;
+    -webkit-animation: rota 2s linear 0s infinite;
+    -moz-animation: rota 2s linear 0s infinite;
+    -o-animation: rota 2s linear 0s infinite; 
+}

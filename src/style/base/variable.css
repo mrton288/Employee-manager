@@ -1,0 +1,16 @@
+:root {
+    /* Màu sắc */
+    --border-input-focus: #50b83c;
+    --border-input-error: #ff0000;
+    --text-error: #ff0000;
+    --text-success-toast-message: #50b83c;
+    --text-error-toast-message: #DE3618;
+    --text-warning-toast-message: #F49342;
+
+
+    /* Kích thước */
+    --header-height: 56px;
+    --menu-weight: 200px;
+
+    
+}

@@ -1,0 +1,100 @@
+## Cấu trúc thư mục
+
+prop: dùng để hứng nhận dữ liệu từ bên ngaofi vào
+v-show: set ẩn Hiện
+sử dụng emit để truyền phương thwucs lên thằng cha
+- beforCreated: không thể truy cập vào data, chỉ đọc được prop truyền từ bên ngoài vào
+- created: có thể truy cập vào data và method, chưa thể truy cập đc vào DOM
+- beforeMount : chưa thể truy cập đc vào DOM
+- mounted : có thể truy cập được vào DOM, 
+// mấy thằng trên chỉ sinh ra một lần duy nhất
+
+- beforUpdate: chạy trước khi DOM được render lại 
+- update: khi cập nhật dữ liệu mới bắt đầu chạy
+- beforUnmouted: 
+- unmouted: 
+- computed: dùng để tính toán các sự kiện, sử dụng có thể nhớ dữ liệu
+
+
+--Nếu truyền dữ liệu từ component cha xuống component dạng đối tượng qua một prop thì component con nhận
+dữ liệu và có thể binding 2 chiều tuy nhiên việc này không chú ý nó sẽ thay đổi dữ liệu bên ngoài mặc dùng
+ta chỉ ẩn bảng điền thông tin đi chứ không phải lưu thông tin 
+
+
+-- truyền giá trị fix cứng .. VD: label=""
+-- truyền giá trị động ..... VD: :required="true"
+
+1. Components
+- 3 thành phần:
+    - Template : html
+    - Script: js
+    - style: css
+        - Hỗ trợ scss
+        - scoped style: style dành riêng cho components
+
+2. Tạo components
+    - Tạo file .vue
+    - import
+    - Khai báo
+
+3. Root element:
+    - Bắt buộc
+
+4. Two ways binding:
+    - Bind dữ liệu 2 chiều
+
+- Phụ thuộc vào kiểu element
+- Lifecycle : Vòng đời của componnet trong Vue
+- Binding:
+    + Value binding: {{ }}
+    + property binding:
+    + v-bind: [tên thuộc tính] = "biến"
+        * Viết tắt: dấu :
+    + Style and class binding:
+        :class
+
+- Model:
+    + Liên kết element với property
+        * v-model
+        
+- Event handing:
+    + Bắt sự kiện từ các element
+    + v-on:[tên sự kiện]="hàm()"
+        * Viết tắt: @click
+        * VD: v-on:click, v-on:mouseout...
+    + prevent default event
+        + Huỷ bỏ event mặc định của element đi 
+        + Vd: trong nhập liệu dùng để người dùng gõ xong rồi mới gửi đi 
+        + vd: @click.prevent , @click.prevent.debounce
+- ref:
+    + Ánh xạ đến chính element
+    + ref="[tên prop]"
+    + this.$ref.[tên prop]
+
+- Conditional redering:
+    + v-show: Ẩn/Hiện 1 element theo điều kiện
+    + v-show="[tên prop]"
+    + v-hide: ngược lại
+    + v-if: Ẩn/Hiện 1 element theo điều kiện, mất đi luôn khỏi html
+    + v-else:
+
+- List rendering:
+    + v-for:
+
+- Methods:
+    + Hàm của vue object
+    + methods: { 
+        addTask: function() { }
+    }
+
+- watch: 
+    + Theo dõi sự thay đổi của data
+
+- hooks: 
+    + mounted() {
+        // gọi api
+    }
+- Props: 
+    + Dữ liệu đẩy từ component cha => component con.
+    + Dùng mảng tên các prop
+    + Props giống như data
