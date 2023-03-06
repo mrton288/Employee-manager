@@ -1,8 +1,25 @@
 :root {
     /* Màu sắc */
+    --color-green-base: #50B83C;
+    --color-red-base: #ff0000;
+    --color-gray-base: #E6E6E6;
+    --color-white-base: #fff;  
+
+    --btn-extra-hover: #F6F6F6;
+    --btn-extra-active: #ebebeb;
+    --btn-main-hover: #5dc748;
+    --btn-main-active: #0f723d;
+
+
+
+
+
+
     --border-input-focus: #50b83c;
     --border-input-error: #ff0000;
     --text-error: #ff0000;
+
+    --text-heading: #1F1F1F;
     --text-success-toast-message: #50b83c;
     --text-error-toast-message: #DE3618;
     --text-warning-toast-message: #F49342;

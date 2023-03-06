@@ -41,12 +41,14 @@
               v-model="employee.EmployeeCode"
               :require="true"
               ref="txtEmployeeCode"
+              class="w-40p"
             ></base-input>
             <base-input
               label="Tên"
               v-model="employee.FullName"
               :require="true"
               ref="txtEmployeeName"
+              class="w-60p"
             ></base-input>
           </div>
 
@@ -82,7 +84,7 @@
 
         <div class="popup__body-right">
           <div class="flex gap-8">
-            <div class="popup__body-dob flex-col">
+            <!-- <div class="popup__body-dob flex-col">
               <label class="input__label" for="">Ngày sinh</label>
               <input
                 class="input"
@@ -90,8 +92,14 @@
                 id="dateOfBirth"
                 v-model="employee.DateOfBirth"
               />
-              <!-- v-model="bindDateOfBirth" -->
-            </div>
+            </div> -->
+            <base-date
+              label="Ngày sinh"
+              v-model="employee.DateOfBirth"
+              ref="dateOfBirth"
+              typeInput="date"
+              class="w-42p"
+            ></base-date>
             <div class="flex-col popup__body-">
               <label class="input__label" for="">Giới tính</label>
               <div class="popup__gender flex">
@@ -124,16 +132,13 @@
               v-model="employee.IdentityNumber"
               ref="txtIdentityCard"
             ></base-input>
-
-            <div class="popup__body-dateRange flex-col">
-              <label class="input__label" for="">Ngày cấp</label>
-              <input
-                class="input"
-                type="date"
-                id="dateRange"
-                v-model="employee.Identity"
-              />
-            </div>
+            <base-date
+              label="Ngày cấp"
+              v-model="employee.Identity"
+              ref="dateRange"
+              typeInput="date"
+              class="w-42p"
+            ></base-date>
           </div>
           <base-input
             label="Nơi cấp"
@@ -190,40 +195,27 @@
       <!-- popup footer -->
       <div class="popup__footer">
         <div class="btn__store">
-          <button @submit="saveData()" class="btn__store-sub">Cất</button>
-          <button class="btn__store-add">Cất và thêm</button>
+          <base-button name="Cất" class="btn-main"></base-button>
+          <base-button name="Cất và thêm" class="btn-main"></base-button>
         </div>
-        <button class="btn__cancel">Huỷ</button>
+        <base-button name="Huỷ" class="btn-extra"></base-button>
       </div>
     </div>
   </div>
 </template>
 <script>
-// import Datepicker from "vue-datepicker";
 export default {
   name: "PopupAddEmployee",
   props: ["employeeId", "employeeInput"],
-  components: {
-    // Datepicker,
-  },
+  components: {},
   watch: {
-    /**
-     * Hàm nhận id từ bảng nhân viên
-     * Author: NVDUC(2/3/2023)
-     */
-    // employeeId: function (newValue) {
-    //   fetch(`https://apidemo.laptrinhweb.edu.vn/api/v1/Employees/${newValue}`)
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       this.employee = data;
-    //       // eslint-disable-next-line no-undef
-    //       this.employee.DateOfBirth = this.bindDate(data.DateOfBirth);
-    //       this.employee.IdentityDate = this.bindDate(data.IdentityDate);
-    //     });
-    // },
     employee: {
+      /**
+       * Thực hiển thay đổi dữ liệu bên ngoài bảng
+       * Author: NVDUC (4/3/2023)
+       */
       handler: function (newValue) {
-        console.log("Thông tin bên ngoài: ", newValue.EmployeeCode);
+        console.log("Thông tin bên ngoài: ", newValue.DateOfBirth);
       },
       deep: true,
     },

@@ -1,8 +1,8 @@
 <template>
-  <TheMenu />
+  <the-menu />
   <div class="main">
-    <TheHeader />
-    <TheContent />
+    <the-header />
+    <the-content />
   </div>
 </template>
 

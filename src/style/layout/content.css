@@ -2,7 +2,7 @@
     /* display: flex; */
     width: 100%;
     height: calc(100vh - 56px);
-    background-color: #F4F5F7;
+    background-color: #f4f5f7;
 }
 
 .content__header {
@@ -30,17 +30,17 @@
 
 .content__header-add:hover {
     cursor: pointer;
-    background-color: #57C841;
+    background-color: #57c841;
 }
 
 .content__body {
     background-color: #fff;
     height: calc(100vh - 56px - 68px - 12px);
-    width: calc(100vw - 244px);
-    margin:0 24px 12px 24px;
+    /* width: calc(100vw - 244px); */
+    margin: 0 18px 12px 18px;
     display: flex;
     flex-direction: column;
-    padding: 0 20px 0px 12px;
+    padding: 0px 12px 0px 12px;
 }
 
 .content__body-uptable {
@@ -65,23 +65,23 @@
 }
 
 .search-text:active {
-    border: 1px solid #4B8343;
+    border: 1px solid #4b8343;
 }
 
 .search-icon {
     position: absolute;
     right: 9px;
     top: 7px;
-    background: url('/src/assets/img/Sprites.64af8f61.svg') no-repeat -956px -31px;
-	width: 20px;
-	height: 20px;
+    background: url("/src/assets/img/Sprites.64af8f61.svg") no-repeat -956px -31px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
 .content__body-reload {
-    background: url('/src/assets/img/Sprites.64af8f61.svg') no-repeat -425px -201px;
-	width: 24px;
-	height: 24px;
+    background: url("/src/assets/img/Sprites.64af8f61.svg") no-repeat -425px -201px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
 }
 
@@ -101,7 +101,7 @@
     height: 24px;
     border-radius: 3px;
 }
- 
+
 /* Hide the browser's default checkbox */
 .checkbox input {
     position: absolute;
@@ -132,20 +132,20 @@
 /* .checkbox input:checked>td {
     background-color: #F7F7F7;
 } */
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
+
+/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-  
-  /* Show the checkmark when checked */
+
+/* Show the checkmark when checked */
 .checkbox input:checked ~ .checkmark:after {
     display: block;
 }
-  
-  /* Style the checkmark/indicator */
+
+/* Style the checkmark/indicator */
 .checkbox .checkmark:after {
     left: 9px;
     top: 4px;
@@ -158,15 +158,14 @@
     transform: rotate(45deg);
 }
 
-
 table tbody tr:hover {
-    background-color: #EDF8EB;
+    background-color: #edf8eb;
     cursor: pointer;
 }
 
-
-tbody tr:hover td:first-child, tbody tr:hover td:last-child {
-    background-color: #EDF8EB;
+tbody tr:hover td:first-child,
+tbody tr:hover td:last-child {
+    background-color: #edf8eb;
 }
 
 table {
@@ -174,30 +173,35 @@ table {
 }
 
 /* Đặt thuộc tính cho table và thẻ "tr" */
-table, tr {
-    border-bottom: 1px solid #D6D6D6;
+table,
+tr {
+    border-bottom: 1px solid #d6d6d6;
     border-collapse: collapse;
     height: 48px;
 }
 
-table, td, th{
-    border-right: 1px solid #D6D6D6;
+table,
+td,
+th {
+    border-right: 1px solid #d6d6d6;
     border-collapse: collapse;
 }
 
 /* Bỏ line cho cột cuối cả head và body */
-table,th:last-of-type, td:last-of-type{
+table,
+th:last-of-type,
+td:last-of-type {
     border-right: none;
 }
 
 table thead tr {
-    background-color: #EDEEF2;
+    background-color: #edeef2;
     font-size: 14px;
     font-weight: 700;
     color: #000000;
 }
 
-thead th  {
+thead th {
     padding: 0px 10px;
 }
 
@@ -208,11 +212,11 @@ tbody tr td {
 table thead tr th {
     position: sticky;
     top: 0;
-    background-color: #EEE;
+    background-color: #eee;
     text-align: left;
 }
 
-table thead tr th:first-child{
+table thead tr th:first-child {
     left: 0;
     z-index: 2;
     border-right: none;
@@ -251,7 +255,7 @@ tbody tr td:last-child {
 }
 
 .edit__button {
-    color: #639EC8;
+    color: #639ec8;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -264,14 +268,13 @@ tbody tr td:last-child {
     display: flex;
     justify-content: space-between;
     min-height: 50px;
-}   
+}
 
 .footer__paging {
     display: flex;
     align-items: center;
 }
-k
-.paging {
+k .paging {
     display: flex;
     align-items: center;
     position: relative;
@@ -308,12 +311,12 @@ k
 }
 
 .switch__number-selected {
-    border: solid 1px #E3E3E3;
+    border: solid 1px #e3e3e3;
     font-weight: bold;
 }
 
 .switch__number:hover {
-    border: solid 1px #E3E3E3;
+    border: solid 1px #e3e3e3;
     font-weight: bold;
 }
 

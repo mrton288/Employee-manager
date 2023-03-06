@@ -53,7 +53,8 @@
     position: absolute;
     top: 14px;
     right: 24px;
-	background: url('/src/assets/img/Sprites.64af8f61.svg') no-repeat -145px -145px;
+	background: url('/src/assets/img/Sprites.64af8f61.svg') no-repeat ;
+    background-position: -145px -145px;
 	width: 24px;
 	height: 24px;
     cursor: pointer;

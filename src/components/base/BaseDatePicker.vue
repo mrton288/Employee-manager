@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name: "BaseInput",
+  name: "BaseDatePicker",
   props: {
     modelValue: [String, Boolean, Number],
     typeInput: {
@@ -40,14 +40,30 @@ export default {
     },
   },
   watch: {
-    /**
-     * Thông tin hiển thị trong input khi nhập liệu
-     * Author: NVDUC (4/3/2023)
-     */
-    // value: function (newValue) {
-    //   console.log("Thông tin bên trong: ", newValue);
-    //   this.$emit("update:modelValue", newValue);
-    // },
+    value: function (newValue) {
+      this.$emit("update:modelValue", newValue);
+    },
+  },
+
+  computed: {
+    // Chuyến sử dụng để format date đã chọn
+    dateFormat: function () {
+      if (this.value) {
+        var data = new Date(this.value);
+        // Lấy ra ngày
+        let dateValue = data.getDate();
+        // Lấy ra tháng
+        let monthValue = data.getMonth() + 1;
+        // Lẩy ra năm
+        let yearValue = data.getFullYear();
+        dateValue = dateValue < 10 ? `0${dateValue}` : dateValue;
+        monthValue = monthValue < 10 ? `0${monthValue}` : monthValue;
+        console.log("Value: ", this.value);
+        console.log("Model Value: ", this.value);
+        return `${dateValue}/${monthValue}/${yearValue}`;
+      }
+      return "";
+    },
   },
 
   methods: {
@@ -73,26 +89,29 @@ export default {
     },
   },
   created() {
-    this.value = this.modelValue;
+    /**
+     * Định dạng ngày sinh dd/mm/yy
+     * Author: NVDUC (28/2/2023)
+     */
+    if (this.modelValue) {
+      var data = new Date(this.modelValue);
+      // Lấy ra ngày
+      let dateValue = data.getDate();
+      // Lấy ra tháng
+      let monthValue = data.getMonth() + 1;
+      // Lẩy ra năm
+      let yearValue = data.getFullYear();
+
+      dateValue = dateValue < 10 ? `0${dateValue}` : dateValue;
+      monthValue = monthValue < 10 ? `0${monthValue}` : monthValue;
+
+      this.value = `${yearValue}-${monthValue}-${dateValue}`;
+    }
   },
   mounted() {
-    /**
-     * Hàm thực hiện set Focus cho thẻ input 1 cách chủ động
-     * nếu đặt prop ở input nào sẽ focus ở input đó
-     * Author: NVDUC (4/3/2023)
-     */
     if (this.isFocus) {
       this.setFocus();
     }
-    // value: function (newValue) {
-    //   console.log("Thông tin bên trong: ", newValue);
-
-    // fetch(`https://apidemo.laptrinhweb.edu.vn//api/v1/Employees/{id}`)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     this.employees = data;
-    //   });
-    // this.$emit("update:modelValue", this.value);
   },
 
   data() {

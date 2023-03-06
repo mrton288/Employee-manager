@@ -98,3 +98,15 @@ ta chỉ ẩn bảng điền thông tin đi chứ không phải lưu thông tin
     + Dữ liệu đẩy từ component cha => component con.
     + Dùng mảng tên các prop
     + Props giống như data
+
+###########################
+VUEX
+- state: Nơi lưu trữ các trạng thái của ứng dụng
+- getters:
+    + là những hàm để lấy ra state
+    + mapGetters để trong computed
+- mutations: methods 
+    + Là những hàm dùng để thay đổi state
+    + 
+- actions: gọi lêm mutation để thay đổi state
+    + 

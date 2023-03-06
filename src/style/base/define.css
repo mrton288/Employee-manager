@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .flex-col {
     display: flex;
     flex-direction: column;
@@ -5,6 +10,22 @@
 
 .flex {
     display: flex;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.aligin-center {
+    align-items: center;
 }
 
 .show {
@@ -39,8 +60,33 @@
     margin-left: 12px;
 }
 
-.w-26percent {
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mt-48 {
+    margin-top: 48px;
+}
+
+.p-24 {
+    padding: 24px;
+}
+
+/* Độ rộng theo đơn vị % percent */
+.w-26p {
     width: 26%;
+}
+
+.w-60p {
+    width: 60%;
+}
+
+.w-40p {
+    width: 40%;
+}
+
+.w-42p {
+    width: 42%;
 }
 
 /* Màu đỏ cảnh báo lỗi thông dụng */
@@ -73,9 +119,43 @@
 /* border của input  */
 
 .border__error {
-    border-color: var(--border-input-error) !important
+    border-color: var(--border-input-error) !important;
 }
 
 .border__focus {
     border-color: var(--border-input-focus);
+}
+
+.background-white {
+    background-color: #fff;
+}
+
+.bgc-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+/*  */
+
+.blur-model {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.icon-warning {
+    background-position: -598px -463px;
+}
+.icon-ans {
+    background-position: -672px -462px;
+}
+
+.icon-info {
+    background-position: -752px -462px;
 }
