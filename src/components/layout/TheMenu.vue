@@ -5,19 +5,22 @@
       <img class="menu__logo" :src="logo" alt="Logo" />
     </div>
     <div class="menu__body">
-      <li v-for="item in menuItem" :key="item.title">
+      <div v-for="item in menuItem" :key="item.title">
         <menu-item
+          :class="{ active: this.currentPath === item.path }"
           :bgcPosition="item.position"
           :content="item.title"
           :pathString="item.path"
+          v-bind="item"
+          @click="changeCurrentPath(item.path)"
         >
         </menu-item>
-      </li>
+      </div>
     </div>
   </div>
 </template>
 <script>
-import MenuItem from "../menuitem/MenuItem.vue";
+import MenuItem from "../common/menuitem/MenuItem.vue";
 export default {
   name: "TheMenu",
   components: {
@@ -30,25 +33,24 @@ export default {
   },
   methods: {
     /**
-     *  :class="{ active: this.currentPath === menu.path }"
      *  Thay đổi currentPath nhận path mới
      *  -> active đúng item trên menu
      *  Author: NVDUC (6/3/2023)
      */
-    // changeCurrentPath(path) {
-    //   this.currentPath = path;
-    // },
+    changeCurrentPath(path) {
+      this.currentPath = path;
+    },
   },
   created() {
-    // this.currentPath = "/" + location.href.split("/")[3];
+    this.currentPath = "/" + location.href.split("/")[2];
   },
   data() {
     return {
-      // currentPath: "/ooooooo",
+      currentPath: "",
       menuItem: [
         {
           title: "Tổng quan",
-          position: "-30px -1585px",
+          position: "-30px -1630px",
           path: "/abstract",
         },
         {
@@ -64,63 +66,63 @@ export default {
         {
           title: "Mua hàng",
           position: "-161px -1628px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Bán hàng",
           position: "-204px -1628px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Quản lý hoá đơn",
           position: "-249px -1628px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Kho",
           position: "-291px -1628px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Công cụ dụng cụ",
           position: "-335px -1630px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Tài sản cố định",
           position: "-378px -1630px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Thuế",
           position: "-423px -1630px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Giá thành",
           position: "-467px -1628px",
-          path: "/",
+          path: "/deposit",
         },
 
         {
           title: "Tổng hợp",
           position: "-510px -1628px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Ngân sách",
           position: "-378px -1659px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Báo cáo",
           position: "-547px -1628px",
-          path: "/",
+          path: "/deposit",
         },
         {
           title: "Phân tích tài chính",
           position: "-204px -1664px",
-          path: "/",
+          path: "/deposit",
         },
       ],
       logo: require("@/assets/img/Logo_Module_TiengViet_White.66947422.svg"),
@@ -163,12 +165,8 @@ li {
 }
 
 .menu__body {
-  /* display: flex; */
   height: calc(100vh - 56px);
-  /* flex-direction: column; */
   color: #fff;
-  padding: 20px 12px;
-  row-gap: 4px;
   overflow: auto;
   word-wrap: unset;
   min-width: 200px;

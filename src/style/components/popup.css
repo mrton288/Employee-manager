@@ -21,14 +21,13 @@
 }
 
 .popup__content {
-
 }
 
 .popup__title {
     font-size: 24px;
     font-weight: 700;
     margin-right: 10px;
-    color: #1F1F1F;
+    color: #1f1f1f;
 }
 
 .popup__object {
@@ -50,30 +49,35 @@
 }
 
 .popup__exit {
-    position: absolute;
-    top: 14px;
-    right: 24px;
-	background: url('/src/assets/img/Sprites.64af8f61.svg') no-repeat ;
+    background: url("/src/assets/img/Sprites.64af8f61.svg") no-repeat;
     background-position: -145px -145px;
-	width: 24px;
-	height: 24px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
 }
 
-.popup__help {
+.popup__exit-tooltip {
     position: absolute;
     top: 14px;
-    right: 60px;
-	background: url('/src/assets/img/Sprites.64af8f61.svg') no-repeat -89px -145px;
-	width: 24px;
-	height: 24px;
+    right: 20px;
+}
+
+.popup__help {
+    background: url("/src/assets/img/Sprites.64af8f61.svg") no-repeat -89px -145px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
+}
+
+.popup__help-tooltip {
+    position: absolute;
+    top: 14px;
+    right: 50px;
 }
 
 .popup__body {
     display: flex;
     column-gap: 16px;
-
 }
 
 .popup__body-left {
@@ -95,7 +99,6 @@
     flex-direction: column;
     flex: 1;
     width: 50%;
-    
 }
 
 .body__right-gender {
@@ -108,7 +111,7 @@
 
 .popup__select {
     height: 36px;
-    padding-left: 16px; 
+    padding-left: 16px;
     outline-width: 1px;
 }
 
@@ -119,7 +122,6 @@
     width: 60%;
 }
 
-
 .popup__body-cmnd {
     width: 60%;
 }
@@ -127,14 +129,10 @@
     width: 40%;
 }
 
-
-
 .popup__input {
-
 }
 
 .popup__input:focus {
-
 }
 
 .popup__footer {

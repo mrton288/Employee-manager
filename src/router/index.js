@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 /**Page */
-import AbstractPage from "../views/pages/AbstractPage.vue";
-import CashPage from "../views/pages/CashPage.vue";
-import DepositPage from "../views/pages/DepositPage.vue";
+import AbstractPage from "../views/AbstractPage.vue";
+import CashPage from "../views/CashPage.vue";
+import DepositPage from "../views/DepositPage.vue";
 
 const routes = [
     { path: "/abstract", component: AbstractPage },

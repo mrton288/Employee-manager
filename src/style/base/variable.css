@@ -1,33 +1,29 @@
 :root {
     /* Màu sắc */
-    --color-green-base: #50B83C;
+    --color-green-base: #50b83c;
     --color-red-base: #ff0000;
-    --color-gray-base: #E6E6E6;
-    --color-white-base: #fff;  
+    --color-gray-base: #e6e6e6;
+    --color-white-base: #fff;
 
-    --btn-extra-hover: #F6F6F6;
+    --btn-extra-hover: #f6f6f6;
     --btn-extra-active: #ebebeb;
     --btn-main-hover: #5dc748;
     --btn-main-active: #0f723d;
 
-
-
-
-
+    --hover-sidebar-bg: #404f64;
+    --active-sidebar-bg: #404f64;
+    --active-sidebar-color: #0dd469;
 
     --border-input-focus: #50b83c;
     --border-input-error: #ff0000;
     --text-error: #ff0000;
 
-    --text-heading: #1F1F1F;
+    --text-heading: #1f1f1f;
     --text-success-toast-message: #50b83c;
-    --text-error-toast-message: #DE3618;
-    --text-warning-toast-message: #F49342;
-
+    --text-error-toast-message: #de3618;
+    --text-warning-toast-message: #f49342;
 
     /* Kích thước */
     --header-height: 56px;
     --menu-weight: 200px;
-
-    
 }

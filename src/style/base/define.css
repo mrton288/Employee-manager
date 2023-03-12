@@ -28,6 +28,14 @@ a {
     align-items: center;
 }
 
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
 .show {
     display: block;
 }
@@ -52,6 +60,14 @@ a {
     margin: 0;
 }
 
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
 .mr-12 {
     margin-right: 12px;
 }
@@ -62,6 +78,10 @@ a {
 
 .mt-24 {
     margin-top: 24px;
+}
+
+.mt-40 {
+    margin-top: 40px;
 }
 
 .mt-48 {
@@ -89,6 +109,37 @@ a {
     width: 42%;
 }
 
+.w-100p {
+    width: 100%;
+}
+
+.w-24 {
+    width: 24px;
+}
+
+.w-36 {
+    width: 36px;
+}
+
+.w-200 {
+    width: 200px;
+}
+
+.w-260 {
+    width: 260px;
+}
+
+/* size icon */
+.s-icon-24 {
+    height: 24px;
+    width: 24px;
+}
+
+.s-icon-36 {
+    height: 36px;
+    min-width: 36px;
+}
+
 /* Màu đỏ cảnh báo lỗi thông dụng */
 .required {
     color: var(--text-error);
@@ -108,7 +159,7 @@ a {
 }
 
 /* Căn chỉnh text */
-.text__align-right {
+.text__algin-right {
     text-align: right;
     margin-right: 10px;
 }

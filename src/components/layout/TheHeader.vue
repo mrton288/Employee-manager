@@ -9,7 +9,13 @@
     </div>
 
     <div class="header__right">
-      <div class="header__right-bell" title="Thông báo"></div>
+      <div class="show-tooltip relative">
+        <base-icon
+          @click="showToast"
+          :bgcPosition="positionIcon.header.bell"
+        ></base-icon>
+        <base-tooltip contentTooltip="Thông báo"></base-tooltip>
+      </div>
       <div class="header__right-user"></div>
       <p class="header__right-name">Nguyễn Văn Mạnh</p>
       <div class="header__right-arrow-down"></div>
@@ -18,9 +24,17 @@
 </template>
 
 <script>
+import positionIcon from "../../scripts/resources/positionIcon.js";
 export default {
   name: "TheHeader",
+  components: {},
   props: [""],
+  methods: {},
+  data() {
+    return {
+      positionIcon,
+    };
+  },
 };
 </script>
 
